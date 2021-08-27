@@ -53,6 +53,14 @@ type SecretStoreProvider struct {
 	// IBM configures this store to sync secrets using IBM Cloud provider
 	// +optional
 	IBM *IBMProvider `json:"ibm,omitempty"`
+
+	// YandexLockbox configures this store to sync secrets using Yandex Lockbox provider
+	// +optional
+	YandexLockbox *YandexLockboxProvider `json:"yandexlockbox,omitempty"`
+
+	// GItlab configures this store to sync secrets using Gitlab Variables provider
+	// +optional
+	Gitlab *GitlabProvider `json:"gitlab,omitempty"`
 }
 
 type SecretStoreConditionType string
